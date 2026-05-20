@@ -1,3 +1,6 @@
+https://orcid.org/my-orcid?orcid=0009-0004-1872-1153
+https://doi.org/10.5281/zenodo.20306932
+-------------------
 # GRA-Health-Swarm
 ### Swarm Subjectivity for Health, Rejuvenation, Stress Resilience, and Healing — via Anokhin's Functional Systems and GRA Nullification
 
