@@ -1,0 +1,60 @@
+# Drone Phobia Scenario Configuration
+# Models chronic fear of drone attacks as persistent Φ mismatch
+
+scenario:
+  name: "drone_phobia"
+  description: >
+    Chronic fear of drone attacks causing persistent mismatch
+    between "I am safe" prediction and "constant attacks" reality.
+    Models how GRA-Health-Swarm can maintain coherence despite
+    unchangeable external threats.
+
+environment:
+  # Drone attack parameters
+  drone_attacks:
+    frequency: "very_high"  # Constant threat
+    locations: ["Moscow", "regions", "border_areas"]
+    unpredictability: 0.9  # 0-1, higher = less predictable
+    intensity: 0.8  # Severity of threat
+  
+  # News and information
+  news:
+    frequency: "high"
+    alarmist_level: 0.7  # How alarming the news is
+    accuracy: 0.5  # How accurate the information is
+  
+  # Shelter availability
+  shelters:
+    availability: 0.3  # Low availability
+    quality: 0.5
+    distance: "far"  # Not easily accessible
+  
+  # Social support
+  social_support:
+    family_support: 0.6
+    community_support: 0.4
+    institutional_trust: 0.3  # Low trust in government protection
+
+agents:
+  initial_config:
+    afferent_synth:
+      adaptability: 0.4  # Reduced by constant stress
+    decision_dom:
+      adaptability: 0.3  # Rigid dominance → chronic stress risk
+      dominance: 0.9  # Very high dominance (survival mode)
+    aar_main:
+      prediction_accuracy: 0.2  # Poor prediction accuracy
+    mismatch_detect:
+      sensitivity: 0.9  # Very sensitive to threats
+      chronic_threshold: 30  # Lower threshold → faster chronic stress
+
+simulation:
+  steps: 2000
+  health_threshold: 0.1  # Φ_total below this = "healthy enough"
+  
+  interventions:
+    # What can reduce Φ without stopping the war
+    shelter_improvement: false  # Add shelters?
+    information_clarity: false  # Better information?
+    social_support_increase: false  # More support?
+    aar_recalibration: true  # Core GRA mechanism

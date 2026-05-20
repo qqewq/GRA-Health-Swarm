@@ -1,0 +1,72 @@
+# Rejuvenation & Longevity Scenario Configuration
+# Models how GRA-Health-Swarm can drive organism toward rejuvenation
+
+scenario:
+  name: "rejuvenation"
+  description: >
+    Rejuvenation scenario: system starts with high Φ (aged/diseased state)
+    and applies N_health iteratively to recalibrate AARs, activate
+    compensatory functional systems, and drive Φ_total → 0.
+    Models Anokhin's principle: the organism can restore function
+    through dynamic reorganization.
+
+environment:
+  # Optimal healing environment
+  nutrition:
+    quality: 0.9
+    consistency: 0.8
+  
+  physical_activity:
+    level: 0.7
+    regularity: 0.8
+  
+  sleep:
+    quality: 0.8
+    duration: 0.9
+  
+  social:
+    support: 0.8
+    engagement: 0.7
+  
+  stress:
+    chronic_level: 0.1  # Low stress environment
+    acute_events: "rare"
+
+agents:
+  initial_config:
+    # Start with aged/diseased parameters
+    afferent_synth:
+      adaptability: 0.3  # Reduced with age
+      noise_level: 0.2  # Higher noise
+    decision_dom:
+      adaptability: 0.4
+      dominance: 0.6
+    aar_main:
+      prediction_accuracy: 0.4  # Poor predictions
+      recalibration_speed: 0.05  # Slow recalibration
+    efferent_motor:
+      efficiency: 0.5  # Reduced motor function
+    reverse_afferent:
+      feedback_accuracy: 0.5  # Degraded feedback
+
+simulation:
+  steps: 5000
+  health_threshold: 0.05
+  
+  rejuvenation_protocol:
+    aar_recalibration: true
+    feedback_strengthening: true
+    compensatory_systems: true
+    adaptability_training: true
+    
+    # Rejuvenation interventions
+    interventions:
+      - type: "aar_reset"
+        frequency: 100  # Every 100 steps
+        intensity: 0.3
+      - type: "feedback_boost"
+        frequency: 50
+        intensity: 0.2
+      - type: "adaptability_training"
+        frequency: 200
+        intensity: 0.1
