@@ -1,0 +1,240 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  top=3cm,
+  bottom=3cm
+}
+
+\title{
+  GRA-Health-Swarm: \\
+  Swarm Subjectivity for Health, Rejuvenation and Stress Resilience \\
+  via Anokhin's Functional Systems and GRA Nullification
+}
+\author{oleg bits (qqewq)}
+\date{\today}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper presents a mechanism for cybernetic modeling of \textbf{health, stress and disease} through P.K. Anokhin's Theory of Functional Systems combined with GRA-nullification.
+The \texttt{GRA-Health-Swarm} repository implements this mechanism in software.
+
+Key idea:
+\begin{itemize}
+  \item \textbf{Disease} = prolonged mismatch between the brain's prediction (Acceptor of Action Result -- AAR) and reality.
+  \item In GRA terms: disease = chronically high foam $\Phi_{\text{total}} \gg 0$.
+  \item \textbf{Health} = regime $\Phi_{\text{total}} \to 0$ via GRA-reset at the swarm level.
+\end{itemize}
+
+A swarm of agents models functional subsystems of the organism (stress, goals, body, environment, threats).
+The \textbf{N\textsubscript{health}} operator (GRA-reset adapted for health) reconfigures goals, expectations and interactions, striving for a coherent state.
+
+Scenarios:
+\begin{itemize}
+  \item \texttt{drone\_phobia/} -- constant fear of Ukrainian drones, chronic mismatch.
+  \item \texttt{burnout/} -- work/war burnout.
+  \item \texttt{rejuvenation/} -- rejuvenation and longevity.
+  \item \texttt{chronic\_disease/} -- progression of chronic disease.
+\end{itemize}
+
+Rejuvenation theorem: if a biological swarm has at least one agent with a correct AAR (prediction of healthy state) and the N\textsubscript{health} operator is applied iteratively, then $\Phi_{\text{total}} \to 0$ is achievable.
+
+This is \textbf{not a medical tool}, but a cybernetic model: a system can survive war without internal collapse.
+\end{abstract}
+
+\section{Introduction}
+
+In modern approaches to health and stress, often individual aspects are considered: medicine, psychology, physiology.
+Within the GRA (Gradient Reduction of Argumentative Foam) theory and Anokhin's Theory of Functional Systems, the notion of \textbf{foam} $\Phi$ is introduced as a measure of internal uncertainty, contradictoriness and mismatch.
+
+Academician P.K. Anokhin showed that:
+\begin{enumerate}
+  \item The brain builds a \textbf{prediction of the result} (Acceptor of Action Result -- AAR).
+  \item If reality \textbf{matches} the prediction -- stability, no stress.
+  \item If reality \textbf{does not match} and the mismatch persists -- \textbf{chronic stress $\to$ disease}.
+\end{enumerate}
+
+This work proposes a mechanism where a swarm of agents (functional systems) can maintain itself in a state of \textbf{health} through foam $\Phi$ nullification, even under war, drone attacks and chronic stress.
+
+\section{Theoretical Foundation}
+
+\subsection{Anokhin's Theory of Functional Systems}
+
+\begin{definition}
+A \textbf{functional system} is an organization of activity of elements of different anatomical membership, directed towards achieving a useful adaptive result [Anokhin].
+\end{definition}
+
+Key components:
+\begin{itemize}
+  \item \textbf{Afferent synthesis} -- gathering information from the environment.
+  \item \textbf{Dominant} -- main goal.
+  \item \textbf{Acceptor of Action Result (AAR)} -- prediction of future result.
+  \item \textbf{Efferent action} -- motor / physiological output.
+  \item \textbf{Reverse afferentation} -- feedback from body and environment.
+  \item \textbf{Result -- mismatch} -- error signal when prediction and reality do not match.
+\end{itemize}
+
+\subsection{GRA and Foam}
+
+In GRA theory:
+
+\begin{definition}
+\textbf{Foam} $\Phi$ of an agent is a measure of internal contradictoriness of its argumentative space. High $\Phi$ corresponds to uncertainty, blurriness of goals and internal instability.
+\end{definition}
+
+\begin{definition}
+\textbf{Health} $\approx$ low $\Phi_{\text{total}}$ (coherent functional system).
+\end{definition}
+
+\begin{definition}
+\textbf{Disease / burnout / drone-phobia} $\approx$ chronically high $\Phi_{\text{total}}$ (chronic mismatch).
+\end{definition}
+
+\subsection{The Anokhin--GRA Bridge}
+
+\begin{table}[h]
+\centering
+\caption{Mapping Anokhin's components to GRA}
+\begin{tabular}{ll}
+\toprule
+\textbf{Anokhin} & \textbf{GRA} \\
+\midrule
+AAR (result prediction) & Agent's world model $\Psi$ \\
+Reality & Data from environment \\
+Mismatch & Foam $\Phi > 0$ \\
+Chronic mismatch & Prolonged high $\Phi$ \\
+Stress & System instability \\
+Disease & System ``sick'' = $\Phi$ not minimized \\
+Recovery & GRA-reset: operator $N \to \Phi \to 0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{theorem}[Disease and Health in GRA]
+\textbf{Disease} = prolonged mismatch between brain's prediction and reality. \\
+\textbf{Healing} = swarm-level GRA-reset pushing $\Phi_{\text{total}} \to 0$.
+\end{theorem}
+
+\section{GRA-Reset for Health}
+
+\subsection{The N\textsubscript{health} Operator}
+
+The \textbf{N\textsubscript{health}} operator (GRA-reset adapted for health):
+\begin{enumerate}
+  \item Computes local foam $\Phi_i$ of each agent (stress, body, goals, environment).
+  \item Detects high-foam configurations (chronic mismatch).
+  \item Reconfigures goals, expectations and interactions:
+  \begin{itemize}
+    \item Adjusts unrealistic predictions (AAR recalibration).
+    \item Strengthens feedback loops (reverse afferentation).
+    \item Reduces contradictory goals between agents.
+    \item Activates compensatory functional systems.
+  \end{itemize}
+  \item Strives for $\Phi_{\text{total}} \to 0$.
+\end{enumerate}
+
+\begin{theorem}[Rejuvenation Theorem]
+If a biological swarm has at least one agent with a correct AAR (prediction of healthy state) and the N\textsubscript{health} operator is applied iteratively, then $\Phi_{\text{total}} \to 0$ is achievable, corresponding to a state of optimal health and rejuvenation.
+\end{theorem}
+
+\section{Implementation}
+
+The \texttt{GRA-Health-Swarm} repository implements the described mechanism:
+
+\begin{itemize}
+  \item \texttt{core/} -- agents (stress, body, goals, environment), N\textsubscript{health} operator, interaction graph.
+  \item \texttt{scenarios/} -- demonstration runs:
+  \begin{itemize}
+    \item \texttt{drone\_phobia/} -- constant fear of Ukrainian drones.
+    \item \texttt{burnout/} -- work/war burnout.
+    \item \texttt{rejuvenation/} -- rejuvenation and longevity.
+    \item \texttt{chronic\_disease/} -- progression of chronic disease.
+  \end{itemize}
+  \item \texttt{math/} -- formal description of the theory.
+  \item \texttt{paper/} -- this paper.
+\end{itemize}
+
+\section{Scenario: Drone-Phobia}
+
+\textbf{Prediction}: ``I am safe, I am at home, there are no threats''. \\
+\textbf{Reality}: constant drone attacks, explosions, alarms, sirens [BBC, New Izvestia]. \\
+\textbf{Mismatch} $\to$ stress $\to$ drone-phobia.
+
+In GRA:
+\begin{itemize}
+  \item Agent ``threat'' $\to$ high $\Phi$.
+  \item Agent ``safety'' $\to$ low $\Phi$ only when there is shelter.
+  \item $\Phi_{\text{total}}$ remains high $\to$ system ``sick''.
+\end{itemize}
+
+\textbf{What can be done}:
+\begin{itemize}
+  \item Reduce actual threat (fewer drones).
+  \item Increase shelter availability.
+  \item Reduce unpredictability (warnings, signals).
+  \item Change environment (safe zones).
+\end{itemize}
+
+Operator N\textsubscript{health} does not stop war, but helps \textbf{not to lose one's mind in it}.
+
+\section{Discussion}
+
+The proposed mechanism shows that:
+\begin{itemize}
+  \item Disease can be modeled as chronically high foam $\Phi$.
+  \item Health is the regime $\Phi_{\text{total}} \to 0$ via GRA-reset.
+  \item ``Healing'' is not ``imagine yourself healthy'', but structural reorganization of a multi-agent functional system.
+  \item This is \textbf{not a medical tool}, but a cybernetic model.
+  \item A system can survive war without internal collapse if $\Phi_{\text{total}} \approx 0$ is maintained.
+\end{itemize}
+
+Future work:
+\begin{itemize}
+  \item Formalize the Rejuvenation Theorem in rigorous mathematical form.
+  \item Investigate health stability against disruption of links in the swarm.
+  \item Test the mechanism on real multi-agent systems.
+\end{itemize}
+
+\section{Connection to GRA Ecosystem}
+
+\begin{itemize}
+  \item \texttt{GRA-Multiverse-Final} -- universal operator $N$ ($\Phi \to 0$).
+  \item \texttt{GRA-Swarm-Subject} -- subjectivity contagion in swarm.
+  \item \texttt{GRA-Health-Swarm} -- specialization on health: ``subject'' = healthy organism, ``swarm'' = its functional systems.
+\end{itemize}
+
+\section*{Important Disclaimer}
+
+\textbf{This repository is NOT a medical tool}. It is a cybernetic model of health, stress and resilience:
+\begin{itemize}
+  \item It \textbf{does not stop wars} or eliminate drones.
+  \item It \textbf{does not replace medical treatment}.
+  \item It \textbf{explains the mechanism}: why chronic mismatch causes disease and how structural reorganization can restore coherence.
+\end{itemize}
+
+\section*{Acknowledgments}
+
+Academician \textbf{P.K. Anokhin} -- for the Theory of Functional Systems. \\
+\textbf{K.V. Anokhin} -- for continuing and developing the legacy. \\
+\textbf{GRA community} -- for building the nullification ecosystem.
+
+\section*{License}
+
+The project code is released under the MIT License. The full license text is included in the \texttt{LICENSE.txt} file of the repository.
+
+\end{document}
